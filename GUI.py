@@ -60,7 +60,7 @@ def close_window ():
     root.destroy()
 
 def test_notification():
-    toast_logo = os.path.join(prog_location,"../Python main/icon/icon.ico")
+    toast_logo = os.path.join(prog_location,"../Treye/icon/icon.ico")
     toaster.show_toast("Treye","This is a test Notification!",icon_path=toast_logo,duration=5,threaded=True)
     treye.testmessage()
 
@@ -292,7 +292,7 @@ class Toplevel1:
         self.Label1.configure(background="#d9d9d9")
         self.Label1.configure(disabledforeground="#a3a3a3")
         self.Label1.configure(foreground="#000000")
-        photo_location = os.path.join(prog_location,"../Python main/icon/Main-01.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/Main-01.png")
         global _img0
         _img0 = tk.PhotoImage(file=photo_location)
         self.Label1.configure(image=_img0)
@@ -304,7 +304,7 @@ class Toplevel1:
         self.Label3.configure(background="#d9d9d9")
         self.Label3.configure(disabledforeground="#a3a3a3")
         self.Label3.configure(foreground="#000000")
-        photo_location = os.path.join(prog_location,"../Python main/icon/Main-01.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/Main-01.png")
         global _img1
         _img1 = tk.PhotoImage(file=photo_location)
         self.Label3.configure(image=_img1)
@@ -322,7 +322,7 @@ class Toplevel1:
         # self.exit.configure(foreground="#000000")
         # self.exit.configure(highlightbackground="#d9d9d9")
         # self.exit.configure(highlightcolor="black")
-        # photo_location = os.path.join(prog_location,"../Python main/icon/Close-02-02.png")
+        # photo_location = os.path.join(prog_location,"../Treye/icon/Close-02-02.png")
         # global _img2
         # _img2 = tk.PhotoImage(file=photo_location)
         # self.exit.configure(image=_img2)
@@ -342,7 +342,7 @@ class Toplevel1:
         # self.minimize.configure(foreground="#000000")
         # self.minimize.configure(highlightbackground="#d9d9d9")
         # self.minimize.configure(highlightcolor="black")
-        # photo_location = os.path.join(prog_location,"../Python main/icon/Minimize-01.png")
+        # photo_location = os.path.join(prog_location,"../Treye/icon/Minimize-01.png")
         # global _img3
         # _img3 = tk.PhotoImage(file=photo_location)
         # self.minimize.configure(image=_img3)
@@ -557,7 +557,7 @@ class Toplevel1:
         self.addnew.configure(foreground="#000000")
         self.addnew.configure(highlightbackground="#33CFDB")
         self.addnew.configure(highlightcolor="black")
-        photo_location = os.path.join(prog_location,"../Python main/icon/Add-02.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/Add-02.png")
         global _img4
         _img4 = tk.PhotoImage(file=photo_location)
         self.addnew.configure(image=_img4)
@@ -575,7 +575,7 @@ class Toplevel1:
         self.addlink.configure(foreground="#000000")
         self.addlink.configure(highlightbackground="#33CFDB")
         self.addlink.configure(highlightcolor="black")
-        photo_location = os.path.join(prog_location,"../Python main/icon/Add-02.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/Add-02.png")
         global _img5
         _img5 = tk.PhotoImage(file=photo_location)
         self.addlink.configure(image=_img5)
@@ -594,7 +594,7 @@ class Toplevel1:
         self.Button1.configure(foreground="#000000")
         self.Button1.configure(highlightbackground="#33CFDB")
         self.Button1.configure(highlightcolor="black")
-        photo_location = os.path.join(prog_location,"../Python main/icon/Test-02.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/Test-02.png")
         global _img6
         _img6 = tk.PhotoImage(file=photo_location)
         self.Button1.configure(image=_img6)
@@ -615,7 +615,7 @@ class Toplevel1:
         self.check_now.configure(foreground="#000000")
         self.check_now.configure(highlightbackground="#33CFDB")
         self.check_now.configure(highlightcolor="black")
-        photo_location = os.path.join(prog_location,"../Python main/icon/intrefresh-01.png")
+        photo_location = os.path.join(prog_location,"../Treye/icon/intrefresh-01.png")
         global _img9
         _img9 = tk.PhotoImage(file=photo_location)
         self.check_now.configure(image=_img9)
