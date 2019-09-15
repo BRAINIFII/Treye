@@ -1,0 +1,5 @@
+priceblock_saleprice: https://www.amazon.in/Filmcity-Camera-Handles-Release-Panasonic/dp/B01GJEDZKW/ref=pd_sbs_23_5/259-0029898-7954774?_encoding=UTF8&pd_rd_i=B01GJEDZKW&pd_rd_r=761df284-1b54-4c67-812d-db8657965779&pd_rd_w=aaKUl&pd_rd_wg=WJwlR&pf_rd_p=2785a4f5-4b62-4bf0-bf3d-365a6e281498&pf_rd_r=37W9EFCY58PQE3K10YK9&psc=1&refRID=37W9EFCY58PQE3K10YK9
+
+priceblock_ourprice: https://www.amazon.in/DJI-Ronin-S-Superior-Handheld-stabilizer/dp/B07H1DTR7F?pf_rd_p=d956de62-3849-4fa4-a5f3-eea045432d33&pd_rd_wg=rYUHT&pf_rd_r=TS0KC55G8KCDEGWZ2BHY&ref_=pd_gw_cr_simh&pd_rd_w=c6f3f&pd_rd_r=0cea55db-d6b2-4783-a251-8207520b97aa
+
+priceblock_dealprice: https://www.amazon.in/Renewed-Lenovo-T410-Thinkpad-Inches/dp/B07WSX7PFN/ref=gbph_img_m-3_4a70_d80a37ae?smid=A3UYIVH8L0OEVF&pf_rd_p=e281e690-b45b-4937-85ae-22a193b84a70&pf_rd_s=merchandised-search-3&pf_rd_t=101&pf_rd_i=12497409031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_r=EGHW4QDNJ8XCGM4T4J8Y

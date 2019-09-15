@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "C:\\Users\\YT\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "Treye_data",
+            "dialect": "PostgreSQL",
+            "name": "data",
+            "password": "mr5tr4n63",
+            "port": 5432,
+            "server": "127.0.0.1",
+            "username": "postgres"
+        }
+    ]
+}
