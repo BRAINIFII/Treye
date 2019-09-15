@@ -8,7 +8,8 @@ Treye-watchdog lets you create Amazon product price watches and get
 alerts via email and Notification Toasts when prices drop.
 
 ### Installations
-Run this command to run all the required modules.
+Run this command to install all the required modules.
+Please make sure pip is installed.
 ```
 pip install -r requirements.txt
 ```
