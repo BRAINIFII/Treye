@@ -16,8 +16,12 @@ https://code.visualstudio.com/
 Python IDLE will work too
 
 ### Installations
-Run this command to install all the required modules.
 Please make sure pip is installed.
+Run This command to check if pip is installed.
+```
+pip --version
+```
+Run this command to install all the required modules.
 ```
 pip install -r requirements.txt
 ```
