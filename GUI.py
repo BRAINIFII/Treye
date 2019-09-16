@@ -447,7 +447,7 @@ class Toplevel1:
         self.onlinestatus.configure(foreground="#ffffff")
         self.onlinestatus.configure(highlightbackground="#d9d9d9")
         self.onlinestatus.configure(highlightcolor="black")
-        self.onlinestatus.configure(text='')
+        self.onlinestatus.configure(text='•')
         self.onlinestatus.configure(width=312)
         self.onlinestatus.configure(anchor='w')
 
