@@ -9,13 +9,12 @@ product and when to skip shopping.
 Treye-watchdog lets you create Amazon product price watches and get
 alerts via email and Notification Toasts when prices drop.
 
-## Things to remember
+## Prerequisite
 Make sure you are using VS CODE for running this project
 https://code.visualstudio.com/
 
 Python IDLE will work too
 
-### Installations
 Please make sure pip is installed.
 Run This command to check if pip is installed.
 ```
@@ -31,6 +30,6 @@ Run this command to install all the required modules.
 pip install -r requirements.txt
 ```
 
-## Authors
+## Developer
 
 * **Kritik Bangera** - *Initial work* - [BRAINIFII](https://github.com/BRAINIFII)
