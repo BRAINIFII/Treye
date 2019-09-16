@@ -23,14 +23,14 @@ pip --version
 If this gives an error pip is not installed
 That means you are a beginner.
 Go install PIP first.
-
+follow this link https://www.liquidweb.com/kb/install-pip-windows/
 
 Run this command to install all the required modules.
 ```
 pip install -r requirements.txt
 ```
+For database install posgreSQL and change credentials in the program as per your need.
 
 ## Developer
 
 * **BRAINIFII** - *Initial work* - [BRAINIFII](https://github.com/BRAINIFII)
-<!-- * **Kritik Bangera** - *Initial work* - [BRAINIFII](https://github.com/kritikbangera) -->
