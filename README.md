@@ -34,7 +34,3 @@ pip install -r requirements.txt
 
 * **BRAINIFII** - *Initial work* - [BRAINIFII](https://github.com/BRAINIFII)
 <!-- * **Kritik Bangera** - *Initial work* - [BRAINIFII](https://github.com/kritikbangera) -->
-
-
-krithik.bangera@vvuniversal.edu.in
-by making open source software
