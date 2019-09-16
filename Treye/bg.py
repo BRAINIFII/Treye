@@ -24,7 +24,7 @@ import os.path
 
 def vp_start_gui():
     '''Starting point when module is the main routine.'''
-    global val, w, root
+    global  w, root
     global prog_location
     prog_call = sys.argv[0]
     prog_location = os.path.split(prog_call)[0]
@@ -37,7 +37,7 @@ def vp_start_gui():
 w = None
 def create_Toplevel1(root, *args, **kwargs):
     '''Starting point when module is imported by another program.'''
-    global w, w_win, rt
+    global w, rt
     global prog_location
     prog_call = sys.argv[0]
     prog_location = os.path.split(prog_call)[0]

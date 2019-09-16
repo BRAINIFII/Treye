@@ -2,9 +2,6 @@ import sys
 from win10toast import ToastNotifier
 import threading
 import Tmodules.treye as treye
-import Tmodules.welcome as welcome
-
-from sqlite3 import *
 import time
 import os
 toaster = ToastNotifier()
@@ -27,6 +24,7 @@ import bitly_api
 import psycopg2
 import runpy
 import tkinter.messagebox
+#import Tracker.price as tracker
 
 
 #Bitly
@@ -39,12 +37,12 @@ bitly = bitly_api.Connection(API_USER, API_KEY)
 
 def vp_start_gui():
     '''Starting point when module is the main routine.'''
-    global val, w, root
+    global w, root
     global prog_location,varEntry,varEntry2,varEntry3
     prog_call = sys.argv[0]
     prog_location = os.path.split(prog_call)[0]
     root = tk.Tk()
-    root.iconbitmap('icon\icon.ico')
+    root.iconbitmap('icon\\icon.ico')
     varEntry = tk.StringVar(root,value="")
     varEntry2 = tk.StringVar(root,value="")
     varEntry3 = tk.StringVar(root,value="")
@@ -67,7 +65,7 @@ def test_notification():
 w = None
 def create_Toplevel1(root, *args, **kwargs):
     '''Starting point when module is imported by another program.'''
-    global w, w_win, rt
+    global w, rt
     global prog_location
     prog_call = sys.argv[0]
     prog_location = os.path.split(prog_call)[0]
@@ -97,6 +95,16 @@ class Toplevel1:
         if retrycancel == True:
             self.check_internet_connection()
 
+    def x_button_pressed(self):
+        print("Program closed")
+        yesno = tkinter.messagebox.askyesno("Treye","Do you want to run the application in background.")
+        if yesno == True:
+            print("Yes")
+            root.destroy()
+        elif yesno == False:
+            print("No")
+            root.destroy()
+
     def status(self,text=None):
         Text ='Treye Status : ' + text
         self.Label4_3.configure(text=Text)
@@ -113,7 +121,7 @@ class Toplevel1:
 
     def check_internet_connection(self):
         try:
-            bitly_d=bitly.shorten('https://www.google.com')
+            bitly.shorten('https://www.google.com')
             self.onlinestatusd(status=True)
         except (bitly_api.bitly_api.BitlyError) as error:
             a = str(error)
@@ -201,7 +209,7 @@ class Toplevel1:
             print ("Treye Module Error:Error while creating PostgreSQL table", error)
 
     def add_link(self):
-        global status,i,url_title,prod_price
+        global status,url_title,prod_price
         self.status(text='Please wait Reading Data')
         to_add = varEntry.get()
         try:
@@ -258,6 +266,8 @@ class Toplevel1:
     def __init__(self, top=None):
         root.after(2000, self.refresh_data)
         root.after(5000, self.check_internet_connection )
+        root.protocol("WM_DELETE_WINDOW", self.x_button_pressed)
+
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
