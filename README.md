@@ -21,7 +21,16 @@ Run This command to check if pip is installed.
 ```
 pip --version
 ```
+If this gives an error pip is not installed
+That means you are a beginner.
+Go install PIP first.
+
+
 Run this command to install all the required modules.
 ```
 pip install -r requirements.txt
 ```
+
+## Authors
+
+* **Kritik Bangera** - *Initial work* - [BRAINIFII](https://github.com/BRAINIFII)
