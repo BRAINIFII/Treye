@@ -4,6 +4,8 @@ import threading
 import Tmodules.treye as treye
 import time
 import os
+from infi.systray import SysTrayIcon
+import GUI
 toaster = ToastNotifier()
 
 try:
@@ -17,7 +19,7 @@ try:
 except ImportError:
     import tkinter.ttk as ttk
     py3 = True
-
+import subprocess
 import GUI_support
 import os.path
 import bitly_api
@@ -49,7 +51,7 @@ def vp_start_gui():
     top = Toplevel1 (root)
     root.geometry("1027x642+300+100")
     root.resizable(0, 0)
-    #root.overrideredirect(True)
+    root.overrideredirect(1)
     GUI_support.init(root, top)
     root.mainloop()
 
@@ -87,7 +89,15 @@ def destroy_Toplevel1():
     w = None
 
 
+
+def notify_tray():
+    menu_options = (("Open GUI", None, vp_start_gui()),)
+    systray = SysTrayIcon("icon/icon.ico", "Treye", menu_options)
+    systray.start()   
+
 class Toplevel1:
+
+
     def nointernet(self):
         #tkinter.messagebox.askretrycancel("Treye","Please check your internet connection and try again.\nError: No Internet Connection")
         retrycancel = tkinter.messagebox.askretrycancel("Treye","Please check your internet connection and try again.\nError: No Internet Connection")
@@ -101,6 +111,7 @@ class Toplevel1:
         if yesno == True:
             print("Yes")
             root.destroy()
+            os.system("cd " + prog_location + '& start /min pythonw notify_.py')
         elif yesno == False:
             print("No")
             root.destroy()
@@ -266,8 +277,8 @@ class Toplevel1:
     def __init__(self, top=None):
         root.after(2000, self.refresh_data)
         root.after(5000, self.check_internet_connection )
-        root.protocol("WM_DELETE_WINDOW", self.x_button_pressed)
-
+        #root.protocol("WM_DELETE_WINDOW", root.iconify)
+        #root.protocol("WM_DELETE_WINDOW", self.x_button_pressed)
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -322,24 +333,24 @@ class Toplevel1:
         self.Label3.configure(width=182)
 
        
-        # self.exit = tk.Button(top)
-        # self.exit.place(relx=0.94, rely=0.0, height=30, width=56)
-        # self.exit.configure(activebackground="#ececec")
-        # self.exit.configure(activeforeground="#000000")
-        # self.exit.configure(background="#d9d9d9")
-        # self.exit.configure(borderwidth="0")
-        # self.exit.configure(disabledforeground="#a3a3a3")
-        # self.exit.configure(foreground="#000000")
-        # self.exit.configure(highlightbackground="#d9d9d9")
-        # self.exit.configure(highlightcolor="black")
-        # photo_location = os.path.join(prog_location,"../icon/Close-02-02.png")
-        # global _img2
-        # _img2 = tk.PhotoImage(file=photo_location)
-        # self.exit.configure(image=_img2)
-        # self.exit.configure(pady="0")
-        # self.exit.configure(text='''Button''')
-        # self.exit.configure(width=62)
-        # self.exit.configure(command = close_window)
+        self.exit = tk.Button(top)
+        self.exit.place(relx=0.94, rely=0.0, height=30, width=56)
+        self.exit.configure(activebackground="#ececec")
+        self.exit.configure(activeforeground="#000000")
+        self.exit.configure(background="#d9d9d9")
+        self.exit.configure(borderwidth="0")
+        self.exit.configure(disabledforeground="#a3a3a3")
+        self.exit.configure(foreground="#000000")
+        self.exit.configure(highlightbackground="#d9d9d9")
+        self.exit.configure(highlightcolor="black")
+        photo_location = os.path.join(prog_location,"../icon/Close-02-02.png")
+        global _img2
+        _img2 = tk.PhotoImage(file=photo_location)
+        self.exit.configure(image=_img2)
+        self.exit.configure(pady="0")
+        self.exit.configure(text='''Button''')
+        self.exit.configure(width=62)
+        self.exit.configure(command = self.x_button_pressed)
 
         
         # self.minimize = tk.Button(top)
