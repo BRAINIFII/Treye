@@ -32,6 +32,8 @@ conn = psycopg2.connect(user = "postgres",
                             database = "Treye_data")
 cursor = conn.cursor()
 global i
+
+i = 0
 cursor.execute("select exists(select * from information_schema.tables where table_name=%s)", ('data',))
 dbexist = cursor.fetchone()[0]
 if dbexist == True:
@@ -79,7 +81,7 @@ def crawler(URL,API_USER,API_KEY):
         API_KEY {string} -- API secret-key
     """
     global bitly,price,price_notif,product_title,product_price,i,shurl
-    print("Given URL : ",URL)
+    print("Given URL : ",URL + "\n")
     bitly = bitly_api.Connection(API_USER, API_KEY)
     response = bitly.shorten(URL)
     shurl = response["url"]
@@ -160,8 +162,8 @@ def crawler(URL,API_USER,API_KEY):
 
 
 def notify():
-    toast_logo = os.path.join(prog_location,"../Python Project/icon/icon.ico")
-    toaster.show_toast("Treye","Price for your searched product (" + product_title + ") is Rs. "+price_notif,icon_path=toast_logo,duration=9,threaded=True)
+    toast_logo = os.path.join(prog_location,"../icon/icon.ico")
+    toaster.show_toast("Treye","Current price for your searched product (" + product_title + ") is Rs. "+price_notif + "we will notify as soon as price drops",icon_path=toast_logo,duration=9,threaded=True)
     text = "Treye:\nPrice for your searched product (" + product_title + ") is Rs. *"+price_notif+"* \nLink: " + shurl
     client.messages.create(body=text,from_=from_whatsapp_number,to = to_whatsapp_number)
     time.sleep(1)

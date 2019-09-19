@@ -652,9 +652,3 @@ if __name__ == '__main__':
     #t = threading.Thread(target=vp_start_gui)
     #t.start()
     vp_start_gui()
-    
-
-
-
-
-
